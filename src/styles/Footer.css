@@ -1,0 +1,23 @@
+.footer {
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.sosialeMedier svg {
+    color : #ffffff;
+    margin: 20px;
+    font-size: 70px;
+    cursor: pointer;
+}
+
+
+.footer p {
+    color: #fff;
+    text-align: center;
+}
