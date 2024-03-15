@@ -1,0 +1,67 @@
+.terminliste {
+    width: 100%;
+    max-width: 600px; /* Juster etter ønsket maks bredde */
+    margin: auto;
+  }
+  
+  .terminliste h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .terminliste__container {
+    margin-top: 20px;
+  }
+  
+  .kamp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin-bottom: 10px; /* Avstand mellom kamper */
+    border-radius: 5px; /* Liten avrunding av hjørnene */
+  }
+  
+  .kamp__index {
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+  }
+  
+  .kamp__detaljer {
+    flex-grow: 1;
+  }
+  
+  .kamp__dato-tid {
+    font-weight: bold;
+  }
+  
+  .kamp__oppgjør {
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .bindstrek {
+    margin: 0 5px;
+  }
+  
+  .kamp__sted {
+    font-style: italic;
+    color: #777;
+  }
+  .kamp__logos {
+    display: flex;
+    align-items: center;
+
+  }
+  
+  .kamp__logo__hjemme {
+    margin-right: 10px; /* Juster dette etter behov */
+    
+
+  }
+  
+  .kamp__logo__borte {
+    margin-left: 20px; /* Juster dette etter behov */
+  }
