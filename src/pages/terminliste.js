@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/terminliste.css';
-import kampData from '../components/kampData'; // Pass på at filnavnet matcher nøyaktig
+import kampData from '../components/kampData'; // Ensure the file name matches exactly
 import skMannLogo from '../assets/SkMann1.png';
 import gneistLogo from '../assets/Gneist1.png';
 import nordhordlandLogo from '../assets/NordHordaland1.png';
@@ -26,13 +26,49 @@ const teamLogos = {
 };
 
 function Terminliste() {
+  const today = new Date();
+
+  // Find the next game
+  const nextGame = kampData
+    .map(kamp => ({
+      ...kamp,
+      dato: new Date(kamp.dato.split('.').reverse().join('-') + 'T' + kamp.tid),
+    }))
+    .filter(kamp => kamp.dato > today)
+    .sort((a, b) => a.dato - b.dato)[0];
+  
+  console.log("nextGame", nextGame);
+
   return (
     <div className="terminliste">
+      <h1>Neste kamp</h1>
+      {nextGame ? (
+        <div className="nextMatch">
+          <div className="kamp__detaljer">
+            <div className="kamp__dato-tid">
+              <span className="kamp__dato">{nextGame.dato.toLocaleDateString()}</span>
+              <span className="kamp__tid"> kl: {nextGame.tid}</span>
+            </div>
+            <div className="kamp__oppgjør">
+              <span className="kamp__hjemme">{nextGame.hjemme}</span>
+              <span className="bindstrek">-</span>
+              <span className="kamp__borte">{nextGame.borte}</span>
+            </div>
+            <div className="kamp__sted">{nextGame.sted}</div>
+          </div>
+          <div className="kamp__logo">
+            <img className="kamp__logo__hjemme" src={teamLogos[nextGame.hjemme]} alt={nextGame.hjemme} />
+            <img className="kamp__logo__borte" src={teamLogos[nextGame.borte]} alt={nextGame.borte} />
+          </div>
+        </div>
+      ) : (
+        <p>Ingen flere kamper denne sesongen</p>
+      )}
+      
       <h1>Terminliste</h1>
       <div className="terminliste__container">
         {kampData.map((kamp, index) => (
           <div key={index} className="kamp">
-
             <div className="kamp__index">#{index + 1}</div>
             <div className="kamp__detaljer">
               <div className="kamp__dato-tid">
