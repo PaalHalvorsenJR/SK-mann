@@ -9,6 +9,8 @@ import tertnesLogo from '../assets/Tertnes1.png';
 import arnaLogo from '../assets/arna.png';
 import kvernbitLogo from '../assets/kvernbit.png';
 import bergkrystallLogo from '../assets/Ørn_Horten.png';
+import flaktveitLogo from '../assets/flaktveit.png';
+import hausvikLogo from '../assets/hausvik.png';
 
 const teamLogos = {
   'Mann': skMannLogo,
@@ -19,6 +21,8 @@ const teamLogos = {
   'Arna-Bjørnar 2': arnaLogo,
   'Kvernbit 2': kvernbitLogo,
   'Bergkrystall/Ørnen 2': bergkrystallLogo,
+  'Flaktveit 2': flaktveitLogo,
+  'Hausvik': hausvikLogo,
 };
 
 function Terminliste() {
