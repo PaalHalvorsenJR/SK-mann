@@ -1,3 +1,49 @@
+.nextMatch {
+  background-color: #ffffff; /* White background */
+  border: 1px solid #dcdcdc; /* Light grey border */
+  padding: 20px;
+  margin: 20px auto; /* Center the block with automatic margins */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center-align children */
+}
+
+.kamp__detaljer__NextMatch {
+  text-align: center; /* Center-align text */
+}
+
+.kamp__dato__tid__NextMatch {
+  color: #333;
+  margin-bottom: 8px; /* Space between date/time and teams */
+}
+
+.kamp__hjemme__NextMatch,
+.kamp__borte__NextMatch {
+  font-size: 1.2em; /* Slightly larger team names */
+  font-weight: bold;
+  
+}
+.bindstrek__NextMatch {
+  font-size: 2em; /* Larger dash for visual effect */
+}
+
+.kamp__sted__NextMatch {
+  font-style: italic;
+  color: #777;
+}
+
+.kamp__oppgjør__NextMatch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between logos and team names */
+  margin-bottom: 8px; /* Space between teams and location */
+}
+
+
+
 .terminliste {
     width: 100%;
     max-width: 600px; /* Juster etter ønsket maks bredde */

@@ -1,5 +1,5 @@
 
-const kampDato = [
+const kampData = [
     { dato: '07.04.2024',
      tid: '19.00',
      hjemme: 'Mann',
@@ -135,6 +135,4 @@ const kampDato = [
   ];
   
 
-
-
-export default kampDato;
+export default kampData;
