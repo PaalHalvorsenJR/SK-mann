@@ -1,0 +1,65 @@
+.trenere_container {
+  max-width: 1200px; /* Set a max-width that can comfortably hold 4 cards */
+  margin: 0 auto; /* Center the container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trenere_title {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+
+.trenere_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.trenere_card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 250px; /* Adjust this value as needed */
+  transition: border 0.1s ease, box-shadow 0.3s ease;
+}
+.trenere_card:hover {
+  border: 1px solid #000;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.trenere_image {
+  width: 100%; /* Set width relative to the card size */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.trener_info {
+  padding: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: large;
+}
+
+@media (max-width: 1024px) {
+  .trenere_grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards in a row for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .trenere_grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards in a row for even smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .trenere_grid {
+    grid-template-columns: 1fr; /* 1 card in a row for the smallest screens */
+  }
+  .trenere_card {
+    max-width: 100%; /* Cards take full width on very small screens */
+  }
+}

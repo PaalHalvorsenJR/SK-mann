@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import logo from '../assets/dalle.png'
+import logo from '../assets/skMANN.png'
 import { Link } from 'react-router-dom'
 import ReorderIcon from '@mui/icons-material/Reorder';
 import '../styles/NavBar.css'
@@ -13,7 +13,7 @@ function Navbar() {
   return (
     <div className='navbar'>
         <div className='leftSide' id={openLinks ? "open" : "close"}>
-          <img src={logo} alt="Logo" />
+          <img src={logo} alt="Logo" className='Logo'/>
           <div className='hiddenLinks'>
               <Link to="/">Hjem</Link>
               <Link to ="/terminliste">Terminliste </Link>

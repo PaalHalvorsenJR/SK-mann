@@ -1,0 +1,71 @@
+.players_container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .players {
+    margin-bottom: 30px; /* Space below the header */
+  }
+  
+  .player_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four items per row */
+    gap: 20px; /* Spacing between cards */
+  }
+  
+  .player_card {
+    background-color: #fff; /* White background */
+    border-radius: 10px; /* Rounded corners for the cards */
+    overflow: hidden; /* Ensures content fits in the border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect for depth */
+    text-align: left; /* Align text to the left inside the card */
+    position: relative; /* For absolute positioning of child elements */
+    transition: border 0.1s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  .player_card:hover {
+    border: 2px solid #1c1c1c; /* Example blue border on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Optionally, increase shadow for depth */
+  }
+  
+  .player_image {
+    width: 100%; /* Image covers the card width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area nicely */
+  }
+  
+  .player_info {
+    padding: 15px; /* Padding inside the card */
+  }
+  
+  .player_info h2 {
+    color: #333; /* Dark grey color for the player's name */
+    margin: 10px 0; /* Spacing around the player's name */
+  }
+  
+  .player_info p {
+    color: #666; /* Light grey color for other information */
+    margin: 5px 0; /* Spacing around the information */
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 1024px) {
+    .player_grid {
+      grid-template-columns: repeat(3, 1fr); /* Three items per row */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .player_grid {
+      grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .player_grid {
+      grid-template-columns: 1fr; /* One item per row */
+    }
+  }
+  

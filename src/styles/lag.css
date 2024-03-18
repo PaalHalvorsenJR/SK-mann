@@ -7,41 +7,65 @@
   .lag_bilde {
     width: 100%;
     height: auto;
+    position: relative;
   }
-  
   .menu_options {
-    position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Offset the div by half its width and height */
-    color: #FFFFFF; /* White text */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px; /* Set a fixed width for the menu */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-radius: 10px; /* Rounded corners */
   }
   
   .menu_options button {
-    background-color: #0052A2; /* Vålerenga blue, adjust as needed */
+    display: block; 
+    width: 100%; /* Full width of the parent */
+    background-color: #1a1a1a;
     border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
+    padding: 40px 25px;
+    margin: 0.1px 0; /* Spacing between buttons */
     color: white;
-    font-size: 1em;
+    font-size: 2em;
+    text-align: left; /* Align text to the left */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
+    border-radius: 0; /* Remove individual button border-radius */
+  }
+  
+  .menu_options button:hover {
+    background-color: #393939;
+  }
+  
+  .menu_options button:first-child {
+    margin-top: 0;
+    border-top-left-radius: 10px; /* Rounded top left corner */
+    border-top-right-radius: 10px; /* Rounded top right corner */
+  }
+  
+  .menu_options button:last-child {
+    margin-bottom: 0;
+    border-bottom-left-radius: 10px; /* Rounded bottom left corner */
+    border-bottom-right-radius: 10px; /* Rounded bottom right corner */
+  }
+  
+  /* Icons */
+  .menu_options button::after {
+    content: '\2192'; /* Unicode right arrow */
+    float: right; /* Position the arrow to the right */
+    margin-right: 10px; /* Space before the right edge */
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .menu_options {
+      width: 200px; /* Smaller width for smaller screens */
     }
-    
-    .menu_options button:hover {
-    background-color: #003366; /* A darker shade for hover effect */
+  
+    .menu_options button {
+      padding: 10px 15px;
     }
-    
-    /* Ensuring responsiveness */
-    @media (max-width: 768px) {
-    .lag-menu h1 {
-    font-size: 1.5em;
-    }
-    
-    .menu-options button {
-    font-size: 0.8em;
-    padding: 5px 10px;
-    }
-    }
+  }
   
