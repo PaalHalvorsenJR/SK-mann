@@ -1,10 +1,47 @@
 .resultater {
     width: 100%;
     height: 90vh;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+    overflow: hidden;
 }
   
 .resultater h1 {
     font-size: 50px;
-    color: #000000;
-    margin-left: 150px;
+    text-align: center;
+    color: #333;
+    margin: 0;
+    padding: 20px 0;
+    background-color: #ffffff;
+    /* border-bottom: 1px solid #dcdcdc; */
   }
+
+.resultater table{
+    width: 75%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.resultater th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #dcdcdc; 
+    border-right: 1px solid #dcdcdc;
+    border-left: 1px solid #dcdcdc;
+    border-top: 1px solid #dcdcdc;
+}
+
+.resultater th {
+    background-color: #f2f2f2; /* Light grey background */
+    color: #333;
+    font-weight: normal;
+    
+
+}
+
+.resultater tr:hover {
+    background-color: #b1b1b1; /* Light grey background on hover */
+}
+
+

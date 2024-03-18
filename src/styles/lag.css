@@ -1,10 +1,47 @@
 .lag {
-    width: 100%;
-    height: 90vh;
-}
-  
-.lag h1 {
-    font-size: 50px;
-    color: #000000;
-    margin-left: 150px;
+    position: relative;
+    text-align: center;
+
   }
+  
+  .lag_bilde {
+    width: 100%;
+    height: auto;
+  }
+  
+  .menu_options {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset the div by half its width and height */
+    color: #FFFFFF; /* White text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+  }
+  
+  .menu_options button {
+    background-color: #0052A2; /* Vålerenga blue, adjust as needed */
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+    
+    .menu_options button:hover {
+    background-color: #003366; /* A darker shade for hover effect */
+    }
+    
+    /* Ensuring responsiveness */
+    @media (max-width: 768px) {
+    .lag-menu h1 {
+    font-size: 1.5em;
+    }
+    
+    .menu-options button {
+    font-size: 0.8em;
+    padding: 5px 10px;
+    }
+    }
+  
